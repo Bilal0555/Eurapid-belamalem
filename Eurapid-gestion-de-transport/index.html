@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion de Transport</h1>
+        <form id="data-form">
+            <input type="text" id="nom" placeholder="Nom" required>
+            <input type="text" id="prenom" placeholder="Prénom" required>
+            <input type="text" id="telephone" placeholder="Téléphone" required>
+            <input type="text" id="cin" placeholder="CIN" required>
+            <input type="text" id="num_serie" placeholder="Numéro de Série" required>
+            <input type="number" id="quantite" placeholder="Quantité" required>
+            <select id="continent" required>
+                <option value="">Sélectionner un continent</option>
+                <option value="europe">Europe</option>
+                <option value="asia">Asie</option>
+                <option value="africa">Afrique</option>
+                <option value="usa">États-Unis</option>
+            </select>
+            <select id="pays" required>
+                <option value="">Sélectionner un pays</option>
+            </select>
+            <select id="ville" required>
+                <option value="">Sélectionner une ville</option>
+            </select>
+            <select id="type_transport" required>
+                <option value="transport_routier">Transport Routier</option>
+                <option value="transport_aerien">Transport Aérien</option>
+                <option value="transport_maritime">Transport Maritime</option>
+            </select>
+            <button type="submit">Ajouter</button>
+        </form>
+        <input type="text" id="search" placeholder="Rechercher...">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Téléphone</th>
+                    <th>CIN</th>
+                    <th>Numéro de Série</th>
+                    <th>Quantité</th>
+                    <th>Type de Transport</th>
+                    <th>Pays</th>
+                    <th>Ville</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="export-btn">Exporter</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

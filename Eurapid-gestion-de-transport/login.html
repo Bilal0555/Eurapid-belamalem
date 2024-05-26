@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Belamalem Bilal</h1> 
+        <form action="index.html" method="post" id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre, un chiffre et un caractère spécial.");
+                event.preventDefault();
+                return false;
+            }})
+    </script>
+</body>
+</html>
